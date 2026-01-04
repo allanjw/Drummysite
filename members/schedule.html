@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Client Scheduling — Allan Ward Percussion Lessons</title>
+  <meta name="description" content="Private client scheduling for Allan Ward Percussion Lessons (login required)." />
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="brand">
+        <span class="brandMark">AW</span>
+        <span>Allan Ward Percussion Lessons</span>
+      </div>
+      <div class="links">
+        <a href="/" class="badge">Home</a>
+        <a href="/about.html" class="badge">About</a>
+        <span class="badge primary">Client Scheduling</span>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Client scheduling</h1>
+    <p class="lede">
+      This page is for current clients. If you can see this page, you’re logged in. Book lessons below.
+    </p>
+
+    <div class="embedWrap">
+      <iframe
+        title="Acuity Scheduling"
+        src="https://your-business.acuityscheduling.com/schedule.php"
+        width="100%"
+        height="900"
+        frameborder="0">
+      </iframe>
+    </div>
+
+    <p class="embedHint">
+      Having trouble? Make sure you’re using the email address you were invited with.
+    </p>
+  </main>
+
+  <footer class="footer">© <span id="y"></span> Allan Ward Percussion Lessons</footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
