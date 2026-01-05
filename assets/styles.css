@@ -165,3 +165,12 @@ p.lede {
   padding: 18px;
   text-align: center;
 }
+
+.heroImage {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 24px auto;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.35);
+}
