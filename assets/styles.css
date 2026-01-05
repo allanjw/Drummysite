@@ -168,10 +168,13 @@ p.lede {
 
 .heroImage {
   width: 100%;
-  max-width: 600px;   /* ← smaller, more personal */
+  max-width: 600px;
+  height: 380px;          /* controls how tall it is */
+  object-fit: cover;      /* crops instead of squishing */
   display: block;
   margin: 20px auto 28px;
   border-radius: 18px;
   box-shadow: 0 10px 30px rgba(0,0,0,.25);
 }
+
 
