@@ -169,7 +169,7 @@ p.lede {
 .heroImage {
   width: 100%;
   max-width: 600px;
-  height: 420px;          /* ← slightly taller */
+  height: 5000px;          /* ← slightly taller */
   object-fit: cover;
   object-position: center;
   display: block;
