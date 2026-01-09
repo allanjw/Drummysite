@@ -182,6 +182,50 @@ p.lede {
   text-align: center;
 }
 
+/* Layout polish */
+.container {
+  max-width: 980px;
+}
+
+.hero {
+  padding-top: 20px;
+  padding-bottom: 26px;
+}
+
+.hero h1 {
+  max-width: 22ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lede {
+  max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Keep button row centered and nicely spaced */
+.inline {
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Give pages a little breathing room */
+main.container {
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+/* Optional: make About page paragraphs easier to read */
+.prose {
+  max-width: 75ch;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
 
 
 
