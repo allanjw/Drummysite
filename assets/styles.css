@@ -260,5 +260,52 @@ main.container {
   object-fit: cover;
 }
 
+/* Contact form cleanup */
+.form {
+  max-width: 760px;
+  margin: 18px auto 0;
+  text-align: left;
+}
+
+.field {
+  display: block;
+  margin: 14px 0;
+}
+
+.field > span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.12);
+  background: rgba(255,255,255,.85);
+  color: inherit;
+}
+
+.field textarea { resize: vertical; }
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+@media (min-width: 720px) {
+  .grid2 { grid-template-columns: 1fr 1fr; }
+}
+
+.muted {
+  opacity: .8;
+  margin-top: 14px;
+}
+
+.hp { display: none; }
+
 
 
