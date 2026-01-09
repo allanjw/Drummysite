@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Contact — Allan Ward Percussion Lessons</title>
+  <meta name="description" content="Contact Allan Ward about private percussion lessons, offered in person and online." />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://allanwarddrums.com/contact.html" />
+
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="brand">
+        <span class="brandMark">AW</span>
+        <span>Allan Ward Percussion Lessons</span>
+      </div>
+      <div class="links">
+        <a href="/" class="badge">Home</a>
+        <a href="/about.html" class="badge">About</a>
+        <span class="badge primary">Contact</span>
+        <a href="/members/schedule.html" class="badge">Client Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Contact</h1>
+
+      <p class="lede">
+        Interested in private percussion lessons?  
+        Send a message below and I’ll get back to you soon.
+      </p>
+
+      <!-- Contact form (Formspree example) -->
+      <!-- Replace the action URL with your real Formspree endpoint -->
+      <form
+        class="form"
+        method="POST"
+        action="https://formspree.io/f/YOUR_FORM_ID">
+
+        <!-- Honeypot field for spam protection -->
+        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" />
+
+        <div class="grid2">
+          <label class="field">
+            <span>Name</span>
+            <input type="text" name="name" required />
+          </label>
+
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" required />
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Student age / experience (optional)</span>
+          <input
+            type="text"
+            name="level"
+            placeholder="e.g., age 11, beginner snare or drumset" />
+        </label>
+
+        <label class="field">
+          <span>Message</span>
+          <textarea
+            name="message"
+            rows="7"
+            required
+            placeholder="Tell me a bit about what you're looking for — in-person or online, goals, questions, etc."></textarea>
+        </label>
+
+        <div class="inline">
+          <button class="btn primary" type="submit">
+            Send message
+          </button>
+
+          <a class="btn" href="/members/schedule.html">
+            Current clients: schedule here
+          </a>
+        </div>
+
+        <p class="muted">
+          Prefer email? You can also reach me at
+          <a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a>.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="y"></span> Allan Ward Percussion Lessons
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
