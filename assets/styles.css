@@ -226,6 +226,39 @@ main.container {
   line-height: 1.7;
 }
 
+/* Home page polish */
+.hero {
+  text-align: center;
+}
+
+.hero h1 {
+  max-width: 26ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lede {
+  max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.inline {
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Hero image: keep it clean and consistent */
+.heroImage {
+  width: 100%;
+  max-width: 980px;
+  margin: 16px auto 10px;
+  display: block;
+  border-radius: 18px;
+  object-fit: cover;
+}
 
 
 
