@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Allan Ward Percussion Lessons</title>
   <meta name="description" content="Private percussion lessons with Allan Ward — in-person and online. Member scheduling available by invitation." />
+
+  <!-- Canonical host is non-www because www currently returns 404 -->
   <link rel="canonical" href="https://allanwarddrums.com/" />
+
   <link rel="stylesheet" href="/assets/styles.css" />
 </head>
 <body>
@@ -15,13 +18,13 @@
         <span class="brandMark">AW</span>
         <span>Allan Ward Percussion Lessons</span>
       </div>
-      <div class="links">
-  <a href="/" class="badge primary">Home</a>
-  <a href="/about.html" class="badge">About</a>
-  <a href="/contact.html" class="badge">Contact</a>
-  <a href="/members/schedule.html" class="badge">Client Login</a>
-</div>
 
+      <div class="links">
+        <a href="/" class="badge primary">Home</a>
+        <a href="/about.html" class="badge">About</a>
+        <a href="/contact.html" class="badge">Contact</a>
+        <a href="/members/schedule.html" class="badge">Client Login</a>
+      </div>
     </nav>
   </header>
 
@@ -30,10 +33,10 @@
       <h1>Percussion lessons — in-person and online.</h1>
 
       <img
-  src="/images/allan_picture.jpg"
-  alt="Allan Ward teaching percussion lessons"
-  class="heroImage"
-/>
+        src="/images/allan_picture.jpg"
+        alt="Allan Ward teaching percussion lessons"
+        class="heroImage"
+      />
 
       <p class="lede">
         Focused, supportive instruction for students who want to build strong fundamentals, improve technique,
@@ -55,10 +58,12 @@
         <h2>Lesson formats</h2>
         <p>In-person and online options, built around your goals and schedule.</p>
       </div>
+
       <div class="card third">
         <h2>What we work on</h2>
         <p>Technique, reading, rhythm, musicianship, audition prep, and confidence.</p>
       </div>
+
       <div class="card third">
         <h2>Scheduling</h2>
         <p>Clients can book lessons online at times that work for them (login required).</p>
@@ -67,6 +72,10 @@
   </main>
 
   <footer class="footer">© <span id="y"></span> Allan Ward Percussion Lessons</footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
