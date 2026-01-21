@@ -3,64 +3,97 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — Allan Ward Percussion Lessons</title>
-  <meta name="description" content="About Allan Ward’s private percussion lessons — in-person and online." />
+
+  <title>About | Allan Ward Percussion Lessons</title>
+  <meta name="description" content="Learn about Allan Ward’s private percussion lessons — in-person and online. Supportive, goal-focused instruction for students at all stages." />
   <link rel="canonical" href="https://allanwarddrums.com/about.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Allan Ward Percussion Lessons" />
+  <meta property="og:title" content="About | Allan Ward Percussion Lessons" />
+  <meta property="og:description" content="Supportive, goal-focused percussion lessons — in-person and online." />
+  <meta property="og:url" content="https://allanwarddrums.com/about.html" />
+  <meta property="og:image" content="https://allanwarddrums.com/images/allan_picture.jpg" />
+
   <link rel="stylesheet" href="/assets/styles.css" />
 </head>
+
 <body>
   <header class="header">
-    <nav class="nav">
-      <div class="brand">
-        <span class="brandMark">AW</span>
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="/" aria-label="Allan Ward Percussion Lessons home">
+        <span class="brandMark" aria-hidden="true">AW</span>
         <span>Allan Ward Percussion Lessons</span>
-      </div>
+      </a>
+
       <div class="links">
-  <a href="/" class="badge">Home</a>
-  <a href="/about.html" class="badge primary">About</a>
-  <a href="/contact.html" class="badge">Contact</a>
-  <a href="/members/schedule.html" class="badge">Client Login</a>
-</div>
+        <a href="/" class="badge">Home</a>
+        <a href="/about.html" class="badge primary" aria-current="page">About</a>
+        <a href="/contact.html" class="badge">Contact</a>
+        <a href="/members/schedule.html" class="badge">Client Login</a>
+      </div>
     </nav>
   </header>
 
-  <main class="container">
+  <main class="container" id="main">
     <h1>About</h1>
 
-<div class="prose">
-  <p class="lede">
-    Lessons are clear, encouraging, and practical — focused on building strong fundamentals, preparing for ensembles, and supporting auditions and performances.
-  </p>
-</div>
+    <div class="prose">
+      <p class="lede">
+        Percussion lessons are clear, encouraging, and practical — designed to help students build strong
+        fundamentals, grow confidence, and make steady musical progress.
+      </p>
 
-    <section class="grid">
+      <p>
+        I work with beginners who are just getting started, students preparing for school ensembles,
+        and advancing players refining technique and musicianship. Lessons are structured around each
+        student’s goals, with an emphasis on consistency, listening, and musical understanding.
+      </p>
+    </div>
+
+    <section class="grid" aria-label="Lesson details">
       <div class="card half">
-        <h2>In-person & online</h2>
+        <h2>In-person &amp; online lessons</h2>
         <p>
-          Choose the format that fits your life. Online lessons can work great with the right setup, and I’ll
-          help you keep it simple.
+          Lessons are available in person or online. With a simple setup, online lessons can be just as
+          effective, and I’ll help you choose an approach that works well for your space and schedule.
         </p>
       </div>
 
       <div class="card half">
-        <h2>What students commonly focus on</h2>
+        <h2>Common areas of focus</h2>
         <p>
-          Snare drum and mallets, reading and rhythm, technique and sound quality, ensemble skills, and
-          performance confidence.
+          Snare drum and mallet instruments, reading and rhythm, technique and sound quality, ensemble skills,
+          audition preparation, and performance confidence.
         </p>
       </div>
 
       <div class="card">
         <h2>How scheduling works</h2>
         <p>
-          Current clients book lessons through a private scheduling page. If you’re interested in starting
-          lessons, reach out first and I’ll share next steps.
+          Current clients schedule lessons through a private online booking system. If you’re interested
+          in starting lessons, please reach out through the contact page and I’ll share availability and
+          next steps.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>What to expect</h2>
+        <p>
+          Lessons are supportive and focused, with clear expectations and achievable goals. We’ll track
+          progress over time and adjust plans as skills and interests develop.
         </p>
       </div>
     </section>
   </main>
 
-  <footer class="footer">© <span id="y"></span> Allan Ward Percussion Lessons</footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <footer class="footer">
+    © <span id="y"></span> Allan Ward Percussion Lessons
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
