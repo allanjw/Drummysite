@@ -3,24 +3,63 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Allan Ward Percussion Lessons</title>
-  <meta name="description" content="Private percussion lessons with Allan Ward — in-person and online. Member scheduling available by invitation." />
 
-  <!-- Canonical host is non-www because www currently returns 404 -->
+  <title>Percussion Lessons (In-Person &amp; Online) | Allan Ward</title>
+  <meta name="description" content="Private percussion lessons with Allan Ward — in-person and online. Build technique, reading, rhythm, and confidence with supportive, goal-focused instruction." />
+  <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://allanwarddrums.com/" />
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Allan Ward Percussion Lessons" />
+  <meta property="og:title" content="Percussion Lessons (In-Person &amp; Online) | Allan Ward" />
+  <meta property="og:description" content="Private percussion lessons — supportive, goal-focused instruction to build technique, reading, rhythm, and confidence." />
+  <meta property="og:url" content="https://allanwarddrums.com/" />
+  <meta property="og:image" content="https://allanwarddrums.com/images/allan_picture.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Percussion Lessons (In-Person &amp; Online) | Allan Ward" />
+  <meta name="twitter:description" content="Private percussion lessons — supportive, goal-focused instruction to build technique, reading, rhythm, and confidence." />
+  <meta name="twitter:image" content="https://allanwarddrums.com/images/allan_picture.jpg" />
+
   <link rel="stylesheet" href="/assets/styles.css" />
+
+  <!-- Hero image framing override: keeps the image the same size, but shows more of the top and less of the bottom. -->
+  <style>
+    .heroImage {
+      width: 100%;
+      height: clamp(280px, 45vh, 520px);
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+    }
+  </style>
+
+  <!-- Basic structured data (Person). Add address/area served later if you want local SEO emphasis. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Allan Ward",
+    "jobTitle": "Percussion Instructor",
+    "url": "https://allanwarddrums.com/",
+    "image": "https://allanwarddrums.com/images/allan_picture.jpg",
+    "sameAs": []
+  }
+  </script>
 </head>
+
 <body>
   <header class="header">
-    <nav class="nav">
-      <div class="brand">
-        <span class="brandMark">AW</span>
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="/" aria-label="Allan Ward Percussion Lessons home">
+        <span class="brandMark" aria-hidden="true">AW</span>
         <span>Allan Ward Percussion Lessons</span>
-      </div>
+      </a>
 
       <div class="links">
-        <a href="/" class="badge primary">Home</a>
+        <a href="/" class="badge primary" aria-current="page">Home</a>
         <a href="/about.html" class="badge">About</a>
         <a href="/contact.html" class="badge">Contact</a>
         <a href="/members/schedule.html" class="badge">Client Login</a>
@@ -28,54 +67,82 @@
     </nav>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <h1>Percussion lessons — in-person and online.</h1>
+  <main class="container" id="main">
+    <section class="hero" aria-labelledby="home-hero-title">
+      <h1 id="home-hero-title">Private percussion lessons — in-person and online.</h1>
+
+      <p class="lede">
+        Supportive, goal-focused instruction that builds technique, reading, rhythm, and confidence — one lesson at a time.
+      </p>
 
       <img
         src="/images/allan_picture.jpg"
-        alt="Allan Ward teaching percussion lessons"
+        alt="Allan Ward teaching a percussion lesson"
         class="heroImage"
+        loading="eager"
+        decoding="async"
       />
 
-      <p class="lede">
-        Focused, supportive instruction for students who want to build strong fundamentals, improve technique,
-        and make real musical progress — one lesson at a time.
-      </p>
-
-      <div class="inline">
-        <a class="btn primary" href="/about.html">Learn about lessons</a>
-        <a class="btn" href="/members/schedule.html">Client scheduling (login)</a>
+      <div class="inline" role="group" aria-label="Primary actions">
+        <a class="btn primary" href="/about.html">Explore lesson options</a>
+        <a class="btn" href="/contact.html">Ask a question</a>
       </div>
 
       <p class="smallNote">
-        Scheduling is available to current clients by invitation. If you’re new, start on the About page.
+        Current clients can book sessions via <a href="/members/schedule.html">client scheduling</a> (login required).
+        New students: start with <a href="/about.html">About</a> for formats, expectations, and next steps.
       </p>
     </section>
 
-    <section class="grid">
+    <section class="grid" aria-label="Highlights">
       <div class="card third">
         <h2>Lesson formats</h2>
-        <p>In-person and online options, built around your goals and schedule.</p>
+        <p>
+          In-person and online lessons designed around your goals, schedule, and learning style.
+        </p>
       </div>
 
       <div class="card third">
         <h2>What we work on</h2>
-        <p>Technique, reading, rhythm, musicianship, audition prep, and confidence.</p>
+        <p>
+          Technique, reading, rhythm, musicianship, audition prep, and performance confidence.
+        </p>
       </div>
 
       <div class="card third">
-        <h2>Scheduling</h2>
-        <p>Clients can book lessons online at times that work for them (login required).</p>
+        <h2>Simple scheduling</h2>
+        <p>
+          Returning clients can book online at times that work for them (secure login).
+        </p>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Who lessons are for">
+      <div class="card">
+        <h2>Who lessons are for</h2>
+        <p>
+          Beginners building fundamentals, students preparing for school ensembles, and advancing players refining
+          technique and musicality. We’ll set clear goals and track progress over time.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Get started</h2>
+        <ol class="steps">
+          <li>Read <a href="/about.html">About</a> to see formats and what to expect.</li>
+          <li>Use the <a href="/contact.html">Contact</a> page to share your goals and availability.</li>
+          <li>If you’re a current client, use <a href="/members/schedule.html">Client Login</a> to book.</li>
+        </ol>
       </div>
     </section>
   </main>
 
-  <footer class="footer">© <span id="y"></span> Allan Ward Percussion Lessons</footer>
+  <footer class="footer">
+    © <span id="y"></span> Allan Ward Percussion Lessons
+  </footer>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
