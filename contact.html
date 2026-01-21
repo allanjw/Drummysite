@@ -18,19 +18,17 @@
 
   <link rel="stylesheet" href="/assets/styles.css" />
 
-  <!-- Contact page styling (intentionally distinct + larger, more clickable inputs) -->
+  <!-- Contact page styling (distinct + larger, more clickable inputs) -->
   <style>
     .contactHero {
       padding-top: 22px;
-      padding-bottom: 26px;
+      padding-bottom: 18px;
       text-align: left;
       max-width: 760px;
       margin: 0 auto;
     }
 
-    .contactHero h1 {
-      margin-bottom: 10px;
-    }
+    .contactHero h1 { margin-bottom: 10px; }
 
     .contactCard {
       max-width: 760px;
@@ -48,10 +46,7 @@
       text-align: left;
     }
 
-    .field {
-      display: block;
-      margin: 14px 0;
-    }
+    .field { display: block; margin: 14px 0; }
 
     .field > span {
       display: block;
@@ -61,8 +56,7 @@
     }
 
     .field input,
-    .field textarea,
-    .field select {
+    .field textarea {
       width: 100%;
       padding: 14px 16px;
       border-radius: 14px;
@@ -84,42 +78,39 @@
       font-size: 13px;
     }
 
-    .choiceRow {
+    /* Lesson format radios (no big boxes) */
+    .radioGroup { margin-top: 6px; }
+
+    .radioRow {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      margin-top: 10px;
+      grid-template-columns: 24px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 10px 0;
+      border-top: 1px solid rgba(255,255,255,.10);
     }
 
-    .choice {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      padding: 12px 12px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      cursor: pointer;
-      user-select: none;
+    .radioRow:first-child { border-top: none; padding-top: 0; }
+
+    .radioRow input[type="radio"] {
+      margin-top: 4px;
+      transform: scale(1.2);
+      accent-color: var(--accent);
     }
 
-    .choice input {
-      margin-top: 3px;
-      transform: scale(1.15);
-    }
-
-    .choice strong {
+    .radioText strong {
       display: block;
-      font-size: 14px;
-      margin-bottom: 2px;
+      font-size: 16px;
+      line-height: 1.2;
     }
 
-    .choice em {
+    .radioText span {
       display: block;
-      font-style: normal;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.3;
+      margin-top: 4px;
+      font-size: 15px; /* larger + easier to read */
+      color: var(--text);
+      opacity: .92;
+      line-height: 1.35;
     }
 
     .actions {
@@ -128,10 +119,9 @@
       gap: 12px;
       align-items: center;
       justify-content: flex-start;
-      margin-top: 14px;
+      margin-top: 16px;
     }
 
-    /* Make the primary button feel extra tappable */
     .actions .btn {
       padding: 12px 16px;
       border-radius: 14px;
@@ -192,16 +182,13 @@
     <section class="contactHero" aria-labelledby="contact-title">
       <h1 id="contact-title">Contact</h1>
       <p class="lede">
-        Tell me a little about the student and what you’re looking for. I’ll reply with next steps and availability.
+        Send a quick message about the student and what you’re looking for. I’ll reply with next steps and availability.
       </p>
     </section>
 
     <section class="contactCard" aria-label="Contact form">
-      <!-- Contact form (Formspree) -->
       <form class="form" method="POST" action="https://formspree.io/f/mnjneezb">
         <input type="hidden" name="_redirect" value="https://allanwarddrums.com/contact.html?sent=true" />
-
-        <!-- Honeypot field for spam protection -->
         <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" />
 
         <label class="field">
@@ -214,46 +201,47 @@
           <input type="email" name="email" required autocomplete="email" placeholder="you@example.com" />
         </label>
 
-        <div class="field" role="group" aria-label="Lesson format preference">
-          <span>Lesson format</span>
-          <div class="choiceRow">
-            <label class="choice">
-              <input type="radio" name="format" value="In-person" />
-              <div>
-                <strong>In-person</strong>
-                <em>Local lessons, hands-on setup, and in-room feedback.</em>
-              </div>
-            </label>
-
-            <label class="choice">
-              <input type="radio" name="format" value="Online" />
-              <div>
-                <strong>Online</strong>
-                <em>Simple home setup. Great for busy schedules and remote students.</em>
-              </div>
-            </label>
-
-            <label class="choice">
-              <input type="radio" name="format" value="Not sure yet" checked />
-              <div>
-                <strong>Not sure yet</strong>
-                <em>We’ll choose the format that fits best.</em>
-              </div>
-            </label>
-          </div>
-          <div class="help">Optional — choose a preference if you have one.</div>
-        </div>
-
         <label class="field">
           <span>Student age / experience (optional)</span>
           <input type="text" name="level" placeholder="e.g., age 11, beginner snare, 2 years band" />
-          <div class="help">This helps me recommend a starting plan.</div>
         </label>
 
         <label class="field">
           <span>Message</span>
-          <textarea name="message" required placeholder="What are your goals? Any questions? If you know your availability, include a few days/times that work."></textarea>
+          <textarea name="message" required placeholder="Goals, questions, and whether you’re considering in-person or online. If you know your availability, include a few days/times that work."></textarea>
         </label>
+
+        <!-- Lesson format moved underneath text fields -->
+        <div class="field" role="group" aria-label="Lesson format preference">
+          <span>Lesson format (optional)</span>
+          <div class="help">Choose a preference if you have one — or leave the default selected.</div>
+
+          <div class="radioGroup">
+            <label class="radioRow">
+              <input type="radio" name="format" value="Not sure yet" checked />
+              <div class="radioText">
+                <strong>Not sure yet</strong>
+                <span>We’ll choose the format that fits best.</span>
+              </div>
+            </label>
+
+            <label class="radioRow">
+              <input type="radio" name="format" value="In-person" />
+              <div class="radioText">
+                <strong>In-person</strong>
+                <span>Local lessons with hands-on setup and in-room feedback.</span>
+              </div>
+            </label>
+
+            <label class="radioRow">
+              <input type="radio" name="format" value="Online" />
+              <div class="radioText">
+                <strong>Online</strong>
+                <span>Simple home setup — great for busy schedules and remote students.</span>
+              </div>
+            </label>
+          </div>
+        </div>
 
         <div class="actions">
           <button class="btn primary" type="submit">Send message</button>
