@@ -4,94 +4,266 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Contact — Allan Ward Percussion Lessons</title>
-  <meta name="description" content="Contact Allan Ward about private percussion lessons, offered in person and online." />
-
-  <!-- Canonical URL -->
+  <title>Contact | Allan Ward Percussion Lessons</title>
+  <meta name="description" content="Contact Allan Ward about private percussion lessons — in-person and online. Send a quick message and I’ll follow up." />
   <link rel="canonical" href="https://allanwarddrums.com/contact.html" />
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Allan Ward Percussion Lessons" />
+  <meta property="og:title" content="Contact | Allan Ward Percussion Lessons" />
+  <meta property="og:description" content="Send a quick message about percussion lessons — in-person or online." />
+  <meta property="og:url" content="https://allanwarddrums.com/contact.html" />
+  <meta property="og:image" content="https://allanwarddrums.com/images/allan_picture.jpg" />
+
   <link rel="stylesheet" href="/assets/styles.css" />
+
+  <!-- Contact page styling (intentionally distinct + larger, more clickable inputs) -->
+  <style>
+    .contactHero {
+      padding-top: 22px;
+      padding-bottom: 26px;
+      text-align: left;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .contactHero h1 {
+      margin-bottom: 10px;
+    }
+
+    .contactCard {
+      max-width: 760px;
+      margin: 14px auto 0;
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: rgba(18,26,42,.85);
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+
+    .form {
+      max-width: 760px;
+      margin: 0;
+      text-align: left;
+    }
+
+    .field {
+      display: block;
+      margin: 14px 0;
+    }
+
+    .field > span {
+      display: block;
+      font-weight: 650;
+      margin-bottom: 8px;
+      letter-spacing: .2px;
+    }
+
+    .field input,
+    .field textarea,
+    .field select {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.92);
+      color: #0b0f17;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+
+    .field textarea {
+      min-height: 180px;
+      resize: vertical;
+    }
+
+    .help {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .choiceRow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .choice {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .choice input {
+      margin-top: 3px;
+      transform: scale(1.15);
+    }
+
+    .choice strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+
+    .choice em {
+      display: block;
+      font-style: normal;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.3;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 14px;
+    }
+
+    /* Make the primary button feel extra tappable */
+    .actions .btn {
+      padding: 12px 16px;
+      border-radius: 14px;
+      font-size: 15px;
+    }
+
+    .contactMeta {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .sentBanner {
+      border: 1px solid rgba(125,211,252,.35);
+      background: rgba(125,211,252,.12);
+      color: var(--text);
+      border-radius: 16px;
+      padding: 12px 14px;
+      margin: 0 auto 14px;
+      max-width: 760px;
+    }
+  </style>
 </head>
 
 <body>
   <header class="header">
-    <nav class="nav">
-      <div class="brand">
-        <span class="brandMark">AW</span>
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="/" aria-label="Allan Ward Percussion Lessons home">
+        <span class="brandMark" aria-hidden="true">AW</span>
         <span>Allan Ward Percussion Lessons</span>
-      </div>
+      </a>
+
       <div class="links">
         <a href="/" class="badge">Home</a>
         <a href="/about.html" class="badge">About</a>
-        <span class="badge primary">Contact</span>
+        <a href="/contact.html" class="badge primary" aria-current="page">Contact</a>
         <a href="/members/schedule.html" class="badge">Client Login</a>
       </div>
     </nav>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <h1>Contact</h1>
+  <main class="container" id="main">
+    <!-- Optional success state (Formspree redirect adds ?sent=true) -->
+    <script>
+      (function () {
+        try {
+          var params = new URLSearchParams(window.location.search);
+          if (params.get("sent") === "true") {
+            var banner = document.createElement("div");
+            banner.className = "sentBanner";
+            banner.textContent = "Thanks — your message was sent. I’ll follow up soon.";
+            document.querySelector("main.container").prepend(banner);
+          }
+        } catch (e) {}
+      })();
+    </script>
 
+    <section class="contactHero" aria-labelledby="contact-title">
+      <h1 id="contact-title">Contact</h1>
       <p class="lede">
-        Interested in private percussion lessons?  
-        Send a message below and I’ll get back to you soon.
+        Tell me a little about the student and what you’re looking for. I’ll reply with next steps and availability.
       </p>
+    </section>
 
-      <!-- Contact form (Formspree example) -->
-      <!-- Replace the action URL with your real Formspree endpoint -->
-      <form
-        class="form"
-        method="POST"
-        action="https://formspree.io/f/mnjneezb">
-        <input type="hidden" name="_redirect" value="https://allanwarddrums.com/contact.html?sent=true">
-
+    <section class="contactCard" aria-label="Contact form">
+      <!-- Contact form (Formspree) -->
+      <form class="form" method="POST" action="https://formspree.io/f/mnjneezb">
+        <input type="hidden" name="_redirect" value="https://allanwarddrums.com/contact.html?sent=true" />
 
         <!-- Honeypot field for spam protection -->
         <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" />
 
-        <div class="grid2">
-          <label class="field">
-            <span>Name</span>
-            <input type="text" name="name" required />
-          </label>
+        <label class="field">
+          <span>Name</span>
+          <input type="text" name="name" required autocomplete="name" placeholder="Your name" />
+        </label>
 
-          <label class="field">
-            <span>Email</span>
-            <input type="email" name="email" required />
-          </label>
+        <label class="field">
+          <span>Email</span>
+          <input type="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+        </label>
+
+        <div class="field" role="group" aria-label="Lesson format preference">
+          <span>Lesson format</span>
+          <div class="choiceRow">
+            <label class="choice">
+              <input type="radio" name="format" value="In-person" />
+              <div>
+                <strong>In-person</strong>
+                <em>Local lessons, hands-on setup, and in-room feedback.</em>
+              </div>
+            </label>
+
+            <label class="choice">
+              <input type="radio" name="format" value="Online" />
+              <div>
+                <strong>Online</strong>
+                <em>Simple home setup. Great for busy schedules and remote students.</em>
+              </div>
+            </label>
+
+            <label class="choice">
+              <input type="radio" name="format" value="Not sure yet" checked />
+              <div>
+                <strong>Not sure yet</strong>
+                <em>We’ll choose the format that fits best.</em>
+              </div>
+            </label>
+          </div>
+          <div class="help">Optional — choose a preference if you have one.</div>
         </div>
 
         <label class="field">
           <span>Student age / experience (optional)</span>
-          <input
-            type="text"
-            name="level"
-            placeholder="e.g., age 11, beginner snare or drumset" />
+          <input type="text" name="level" placeholder="e.g., age 11, beginner snare, 2 years band" />
+          <div class="help">This helps me recommend a starting plan.</div>
         </label>
 
         <label class="field">
           <span>Message</span>
-          <textarea
-            name="message"
-            rows="7"
-            required
-            placeholder="Tell me a bit about what you're looking for — in-person or online, goals, questions, etc."></textarea>
+          <textarea name="message" required placeholder="What are your goals? Any questions? If you know your availability, include a few days/times that work."></textarea>
         </label>
 
-        <div class="inline">
-          <button class="btn primary" type="submit">
-            Send message
-          </button>
-
-          <a class="btn" href="/members/schedule.html">
-            Current clients: schedule here
-          </a>
+        <div class="actions">
+          <button class="btn primary" type="submit">Send message</button>
+          <a class="btn" href="/members/schedule.html">Current clients: schedule here</a>
         </div>
 
-        <p class="muted">
+        <p class="contactMeta">
           Prefer email? You can also reach me at
           <a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a>.
+          <span class="help">Replace this address with your real email.</span>
         </p>
       </form>
     </section>
