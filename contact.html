@@ -164,20 +164,6 @@
   </header>
 
   <main class="container" id="main">
-    <!-- Optional success state (Formspree redirect adds ?sent=true) -->
-    <script>
-      (function () {
-        try {
-          var params = new URLSearchParams(window.location.search);
-          if (params.get("sent") === "true") {
-            var banner = document.createElement("div");
-            banner.className = "sentBanner";
-            banner.textContent = "Thanks — your message was sent. I’ll follow up soon.";
-            document.querySelector("main.container").prepend(banner);
-          }
-        } catch (e) {}
-      })();
-    </script>
 
     <section class="contactHero" aria-labelledby="contact-title">
       <h1 id="contact-title">Contact</h1>
@@ -255,9 +241,6 @@
   <footer class="footer">
     © <span id="y"></span> Allan Ward Percussion Lessons
   </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <script src="/assets/site.js" defer></script>
 </body>
 </html>

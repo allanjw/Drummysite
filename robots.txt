@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /members/
+Sitemap: https://allanwarddrums.com/sitemap.xml
