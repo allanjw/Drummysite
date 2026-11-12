@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Play-Along Etudes | Allan Ward Percussion Lessons</title>
+  <meta name="description" content="Practice play-alongs for percussion students: snare, timpani and mallet etudes with an adjustable tempo, passage looping, count-in and metronome." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://allanwarddrums.com/play-along/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Allan Ward Percussion Lessons" />
+  <meta property="og:title" content="Play-Along Etudes | Allan Ward Percussion Lessons" />
+  <meta property="og:description" content="Snare, timpani and mallet etudes with an adjustable tempo, passage looping, count-in and metronome." />
+  <meta property="og:url" content="https://allanwarddrums.com/play-along/" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <style>
+    .etude { display:grid; grid-template-columns: 1fr auto; gap: 10px 16px; align-items:center }
+    .etude h2 { margin:0 0 4px; font-size:20px }
+    .etude .meta { color:var(--muted); font-size:14px; margin:0 }
+    .etude .btn { white-space:nowrap }
+    @media (max-width:560px){ .etude { grid-template-columns: 1fr } }
+    .howto li { margin: 4px 0 }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="/" aria-label="Allan Ward Percussion Lessons home">
+        <span class="brandMark" aria-hidden="true">AW</span>
+        <span>Allan Ward Percussion Lessons</span>
+      </a>
+      <div class="links">
+        <a href="/" class="badge">Home</a>
+        <a href="/about.html" class="badge">About</a>
+        <a href="/play-along/" class="badge primary" aria-current="page">Play-Along</a>
+        <a href="/contact.html" class="badge">Contact</a>
+        <a href="/members/schedule.html" class="badge">Client Login</a>
+      </div>
+    </nav>
+  </header>
+  <main class="container" id="main">
+    <h1>Play-Along Etudes</h1>
+    <p class="lede">
+      Each etude plays back at any tempo you choose, with a count-in, an optional metronome, and the ability to loop a passage until it sits.
+      Pick a piece, set a comfortable speed, and build up to the written tempo.
+    </p>
+
+    <section class="grid" aria-label="Etudes">
+      <div class="card etude">
+        <div>
+          <h2><a href="snare.html">Snare Etude</a></h2>
+          <p class="meta">Snare drum · 4/4 · ♩ = 100 (suggested) · 21 bars</p>
+          <p class="meta">Flams, drags, buzz and double-stroke rolls, accents and dynamics across 21 bars.</p>
+        </div>
+        <a class="btn primary" href="snare.html">Open play-along</a>
+      </div>
+      <div class="card etude">
+        <div>
+          <h2><a href="timpani.html">Timpani Etude</a></h2>
+          <p class="meta">Timpani (F and C) · 3/4 · ♩ = 80, Declamato · 20 bars</p>
+          <p class="meta">Two drums, rolls and tuplets, with the crescendos written in.</p>
+        </div>
+        <a class="btn primary" href="timpani.html">Open play-along</a>
+      </div>
+      <div class="card etude">
+        <div>
+          <h2><a href="mallets.html">Mallet Etude</a></h2>
+          <p class="meta">Marimba / keyboard percussion · 12/8 · ♩. = 112, Con Brio · 20 bars</p>
+          <p class="meta">Running eighths in D-flat major, rolled chords and a lively 12/8 feel.</p>
+        </div>
+        <a class="btn primary" href="mallets.html">Open play-along</a>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="How to practise with these">
+      <div class="card">
+        <h2>How to use them</h2>
+        <ol class="steps howto">
+          <li>Press <strong>Play</strong>. You get a one-bar count-in, then the etude.</li>
+          <li>Drag the tempo slider anywhere, even while it plays. Arrow keys nudge by 5.</li>
+          <li>To drill a tricky spot, press <strong>Pick bars on score</strong> and click the first and last bar — it loops until you press <strong>Clear loop</strong>.</li>
+          <li>Click any bar on the score to start from there. The current bar is highlighted as it plays.</li>
+        </ol>
+        <p class="smallNote">Works in any modern browser, phone or laptop; no sign-in needed. The sounds are practice references, not recordings.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">© <span id="y"></span> Allan Ward Percussion Lessons</footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
