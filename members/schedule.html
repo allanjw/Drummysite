@@ -5,37 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Client Scheduling — Allan Ward Percussion Lessons</title>
   <meta name="description" content="Private client scheduling for Allan Ward Percussion Lessons (login required)." />
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/assets/styles.css" />
 </head>
 <body>
   <header class="header">
-    <nav class="nav">
-      <div class="brand">
-        <span class="brandMark">AW</span>
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="/" aria-label="Allan Ward Percussion Lessons home">
+        <span class="brandMark" aria-hidden="true">AW</span>
         <span>Allan Ward Percussion Lessons</span>
-      </div>
+      </a>
+
       <div class="links">
         <a href="/" class="badge">Home</a>
         <a href="/about.html" class="badge">About</a>
         <a href="/play-along/" class="badge">Play-Along</a>
-        <span class="badge primary">Client Scheduling</span>
+        <a href="/contact.html" class="badge">Contact</a>
+        <a href="/members/schedule.html" class="badge primary" aria-current="page">Client Login</a>
       </div>
     </nav>
   </header>
 
-  <main class="container">
+  <main class="container" id="main">
     <h1>Client scheduling</h1>
     <p class="lede">
       This page is for current clients. If you can see this page, you’re logged in. Book lessons below.
     </p>
-
-<iframe
-  title="Acuity Scheduling"
-  src="https://allanwardacuityscheduling.as.me/"
-  width="100%"
-  height="900"
-  frameborder="0">
-</iframe>
+    <div class="embedWrap">
+      <iframe
+        title="Acuity Scheduling"
+        src="https://allanwardacuityscheduling.as.me/"
+        height="900">
+      </iframe>
+    </div>
 
 
     <p class="embedHint">
